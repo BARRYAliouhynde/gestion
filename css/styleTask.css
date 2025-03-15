@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 30px;
+	background: linear-gradient(to bottom, rgba(222, 165, 31, 0.868),
+	rgba(63, 57, 31, 0.868));
+	color: #fff;
+}
+.u-name {
+	font-size: 20px;
+	padding-left: 17px;
+	cursor: pointer;
+}
+.u-name b {
+	color: #03171a;
+}
+.header div i {
+	font-size: 25px;
+	cursor: pointer;
+	color: rgba(27, 20, 4, 0.831);
+	padding-left: 13px;
+	border-radius: 40%;
+}
+.header i:hover {
+	color: #fff;
+}
+.user-p {
+	text-align: center;
+	padding-left: 10px;
+	padding-top: 25px;
+}
+.user-p img {
+	width: 100px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.user-p h4 {
+	color: #fff;
+	padding: 5px 0;
+	cursor: pointer;
+}
+.side-bar {
+	width: 250px;
+	background: rgba(188, 136, 17, 0.833);
+	padding-left: 0;
+	min-height: 100vh;
+	transition: 500ms width;
+}
+hr {
+	border: none;
+	height: 4px;
+	background: linear-gradient(to right, #ff0000, #ffff00, #1c1d1c);
+}
+.body {
+	display: flex;
+}
+.section-1 {
+	width: 100%;
+	background: url("../img/bg.jpg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.section-1 h1 {
+	color: #fff;
+	font-size: 60px;
+}
+.section-1 p {
+	color: #127b8e;
+	font-size: 20px;
+	background: #fff;
+	padding: 7px;
+	border-radius: 5px;
+}
+.side-bar ul {
+	margin-top: 20px;
+	list-style: none;
+	padding-left: 0 !important;
+}
+.side-bar ul li {
+	font-size: 16px;
+	padding: 15px 0px;
+	transition: .4s ;
+	padding-left: 25px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+}
+.side-bar ul li:hover {
+	background: #fff;
+}
+.side-bar ul li a {
+	font-weight: 600;
+	text-decoration: none;
+	color: rgba(27, 20, 4, 0.831);
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+.side-bar ul li a i {
+	display: inline-block;
+	padding-right: 10px;
+	font-size: 23px;
+}
+#navbtn {
+	display: inline-block;
+	margin-left: 70px;
+	font-size: 20px;
+	transition: 500ms color;
+}

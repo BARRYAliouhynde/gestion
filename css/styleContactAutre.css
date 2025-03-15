@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; 
+   border:none;
+   text-decoration: none;
+}
+/* --------page de contact-------- */
+.contact {
+   height: 100vh;
+   background-image: linear-gradient(rgba(4, 9, 30, 0.244),rgba(67, 44, 7, 0.753)),url(../images/pexels-fauxels-3184296.jpg);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+}  
+nav{
+   display: flex;
+   padding: 10px 4%;
+   justify-content: space-between;
+   align-items: center;
+   background:rgba(0, 0, 0, 0.386);
+}
+nav img{
+   width: 50px;
+}
+nav a span{
+   position: relative;
+   top: -15px;
+   font-size: 25px;
+   font-weight: bold;
+   color: rgba(216, 156, 15, 0.874);
+}
+.button{
+   display: flex;
+   gap: 20px;
+}
+.button a, .go{
+   font-size: 18px;
+   color: #fff;
+   border: 1px solid rgba(222, 141, 12, 0.753) ;
+   background-color: rgba(165, 121, 18, 0.868);
+   padding: 6px 12px;
+   border-radius: 8px;
+   transition: .4s;
+   position: relative;
+}
+
+
+ .button .btn2{
+   background-color: rgba(255, 255, 255, 0.884);
+   color: rgba(165, 121, 18, 0.831);
+}
+.button .btn2:hover{
+   background-color: rgb(255, 255, 255);
+   color: rgba(216, 156, 15, 0.831);
+}
+.button a:hover, .go:hover{
+   background-color: rgba(209, 151, 16, 0.868);
+   transform: scale(1.1);
+}
+
+
+.presentation{
+   width: 90%;
+   position: absolute;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+}
+.presentation h1{
+   font-size: 35px;
+   font-weight: bold;
+}
+.presentation p{
+   font-size: 20px;
+}
+span{
+   color: rgba(165, 121, 18, 0.868);
+}
+.go{
+  position: relative;
+  cursor: pointer;
+  top: 22px;
+  padding: 5px 30px;
+}
+@media screen and (max-width: 845px){
+   .button a{
+      padding: 4px 8px;
+      font-size: 14px;
+   }
+   .presentation{
+      top: 55%;
+   }
+   .presentation p{
+      font-size: 15px;
+   }
+   .presentation h1{
+      font-size: 20px;
+   }
+}
+/* --------Avis de Client-------- */
+
+#feature{
+   width: 100%;
+   padding: 70px 0;
+   background-color: #efefef;
+  
+}
+.title_text{
+   text-align: center;
+   padding-bottom: 70px;
+}
+.title_text p{
+   margin: auto;
+   font-size: 20px;
+   color: rgba(165, 121, 18, 0.868);
+   font-weight: bold;
+   position: relative;
+   z-index: 1;
+   display: inline-block;
+}
+.title_text p::after{
+   content: '';
+   width: 50px;
+   height: 35px;
+   background: linear-gradient(rgba(222, 178, 75, 0.868),
+                               rgba(167, 161, 136, 0.868));
+   position: absolute;
+   top: -15px;
+   left: 0;
+   z-index: -1;
+   transform: rotate(10deg);
+   border-top-left-radius: 35px;
+   border-bottom-right-radius: 35px;
+}
+.title_text h1{
+   font-size: 50px;
+}
+.testimonial_row{
+   width: 80%;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   background-color: #efefef;
+}
+.testimonial_col{
+   flex-basis: 22%;
+   padding: 10px;
+   margin-left: 20px;
+   margin-bottom: 30px;
+   box-shadow: 0 5px 50px 3px rgba(240, 229, 204, 0.868);
+   cursor: pointer;
+   border-radius: 20px;
+   transition: 0.4s;
+}
+.testimonial_col{
+   font-size: 12px;
+   
+}
+.user{
+   display: flex;
+   align-items: center;
+   margin: 20px 0;
+}
+.user img{
+   width: 40px;
+   margin-right:20px ;
+   border-radius: 50px;
+}
+.user_info .fa-brands{
+   color: rgba(165, 121, 18, 0.868);
+   font-size: 15px;
+}
+.user_info  small{
+   color: #968400;
+}
+.testimonial_col:hover{
+   transform: translateY(8px);
+}
+@media screen and (max-width: 845px){
+   .testimonial_col{
+      flex-basis: 100%;
+      
+   }
+}
+/* --------footer-------- */
+
+#footer{
+   padding: 80px 0 20px;
+   background-image: linear-gradient(rgba(152, 146, 146, 0.612),
+   rgba(152, 146, 146, 0.699)),url(../images/icon.png);
+   background-position: center;
+   background-size: cover;
+}
+.footer_row{
+   width: 80%;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+.footer_left, .footer_right{
+   flex-basis: 45%;
+   padding: 10px;
+   margin-bottom: 20px;
+}
+.footer_right{
+   text-align: right;
+}
+.footer_row h1 {
+   margin: 10px 0;
+}
+.footer_row p{
+   line-height: 35px;
+}
+.fa-solid{
+   margin: 0 8px;
+   color: rgba(165, 121, 18, 0.868);
+   cursor: pointer;
+}
+.footer_left p{
+   position: relative;
+   left: -8px;
+}
+.footer_right p{
+   position: relative;
+   right: -10px;
+}
+.icon{
+   text-align: center;
+}
+.icon i {
+   color: #968400;
+   padding: 8px;
+   font-size: 15px;
+   border: 1px solid #968400;
+   transition: .4s;
+   border-radius: 10px;
+   cursor: pointer;
+}
+.icon i:hover{
+   transform: translateY(-5px);
+   background-color: #d3be1c;
+   color: #fff;
+}
+@media screen and (max-width: 845px){
+   .footer_left,.footer_right{
+      flex-basis: 100%;
+   }
+}
+
+
+/* --------LOGIN & REGISTER-------- */
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding:20px;
+   padding-bottom: 60px;
+   background: linear-gradient(rgba(222, 165, 31, 0.868),
+                               rgba(63, 57, 31, 0.868));
+} 
+
+.form-container form{
+   padding:20px;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgba(0,0,0,.1);
+   background: linear-gradient(to right,rgba(222, 165, 31, 0.868),
+   rgba(63, 57, 31, 0.868));
+   text-align: center;
+   width: 500px;
+}
+
+.form-container form h3{
+   font-size: 30px;
+   text-transform: uppercase;
+   margin-bottom: 10px;
+   color:#333;
+}
+
+.form-container form input,
+.form-container form select{
+   width: 100%;
+   padding:10px 15px;
+   font-size: 17px;
+   margin:8px 0;
+   background: #555425;
+   border-radius: 5px;
+}
+
+.form-container form select {
+   background: #555425;
+}
+
+.form-container form .form-btn{
+   background: rgba(222, 165, 31, 0.868);
+   color:#555425;
+   text-transform: capitalize;
+   font-size: 20px;
+   cursor: pointer;
+}
+
+.form-container form .form-btn:hover{
+   background: rgba(255, 255, 255, 0.557);
+   color:#333;
+}
+
+.form-container form p{
+   margin-top: 10px;
+   font-size: 20px;
+   color:#fff;
+}
+
+.form-container form p a{
+   color:rgba(222, 165, 31, 0.868);
+   border: 1px solid #d3be1c;
+   border-radius: 5px;
+   padding: 5px;
+   margin-left: 10px;
+   transition: .3s;
+   background: #555425;
+   float: right;
+}
+
+.form-container form .error-msg{
+   margin:10px 0;
+   display: block;
+   background: crimson;
+   color:#fff;
+   border-radius: 5px;
+   font-size: 20px;
+   padding:10px;
+}
+
