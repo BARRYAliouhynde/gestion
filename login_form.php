@@ -19,18 +19,28 @@ if(isset($_POST['submit'])){
       $row = mysqli_fetch_array($result);
 
       $_SESSION['username'] = $row['username']; // Stocke le nom d'utilisateur en session
-
+      $_SESSION['user_id'] = $row['id']; // Stocker l'ID de l'utilisateur
+      $_SESSION['role'] = $row['role']; // Stocker le rôle de l'utilisateur
+     
+      // Redirection selon le rôle de l'utilisateur
       if($row['role'] == 'admin'){
-         $_SESSION['admin_name'] = $row['username'];
-         header('location:admin.php');
+           $_SESSION['role'] = $row['role'];
+           $_SESSION['id'] = $row['id'];
+           $_SESSION['username'] = $row['username'];
+         
+         header('location:dashboard.php'); // Redirection vers la page fusionnée pour l'admin
          exit;
       } elseif($row['role'] == 'professionnel'){
-         $_SESSION['professionnel_name'] = $row['username'];
-         header('location:professionnel.php');
+           $_SESSION['role'] = $row['role'];
+           $_SESSION['id'] = $row['id'];
+           $_SESSION['username'] = $row['username'];
+         header('location:dashboard.php'); // Redirection vers la page fusionnée pour le professionnel
          exit;
       } elseif($row['role'] == 'etudiant'){
-         $_SESSION['etudiant_name'] = $row['username'];
-         header('location:etudiant.php');
+          $_SESSION['role'] = $row['role'];
+          $_SESSION['id'] = $row['id'];
+          $_SESSION['username'] = $row['username'];;
+         header('location:dashboard.php'); // Redirection vers la page fusionnée pour l'étudiant
          exit;
       }
    } else {

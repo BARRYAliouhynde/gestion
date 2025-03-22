@@ -13,7 +13,7 @@
     <!-------Home page--------->
     <section class="contact">
         <nav>
-           <a href="contact.html"> <img src="../images/icon.png" alt=""> <span>OnePlace</span></a>
+           <a href="contact.html"> <img src="images/icon.png" alt=""> <span>OnePlace</span></a>
             <div class="button">
                 <a href="register_form.php" class="btn1">S'enregistrer</a>
                 <a href="login_form.php" class="btn2">Se connecter</a>
@@ -31,8 +31,8 @@
 
     <section id="feature">
         <div class="title_text">
-            <p>TESTIMONIALS</p>
-            <h1>What Clients Say</h1>
+            <p>COLLABORATEUR</p>
+            <h1>Collaboration Efficace Ensemble</h1>
         </div>
         <div class="testimonial_row">
             <div class="testimonial_col">
@@ -40,51 +40,55 @@
                     <img src="images/Polish_20240605_142206949.jpg" alt="">
                     <div class="user_info">
                         <h4>Barry <i class="fa-brands fa-linkedin"></i></h4>
-                        <small>@gmail.com </small>
+                        <small>Barry@gmail.com </small>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
-                     elit inventore vero natus quaerat
-                    recusandae non ipsum at corporis,
+                <p>Découvrez notre plateforme de collaboration innovante ! 
+                    Travaillez efficacement en équipe, partagez vos idées 
+                    et gérez vos projets en toute simplicité. 
+                    Rejoignez-nous dès maintenant !
                 </p>
             </div>
             <div class="testimonial_col">
                 <div class="user">
-                    <img src="images/Polish_20240605_142206949.jpg" alt="">
+                    <img src="images/bangoura.jpg" alt="">
                     <div class="user_info">
-                        <h4>Barry <i class="fa-brands fa-linkedin"></i></h4>
-                        <small>@gmail.com </small>
+                        <h4>Moussa <i class="fa-brands fa-linkedin"></i></h4>
+                        <small>Moussa@gmail.com </small>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. inventore vero natus quaerat
-                   recusandae non ipsum at corporis,
+                <p>Besoin d’un espace de travail collaboratif performant ? 
+                    Notre site vous permet d’échanger facilement, 
+                    d’organiser vos tâches et d’améliorer votre productivité.
+                     Essayez-le dès aujourd’hui !
                </p>
             </div>
             <div class="testimonial_col">
                 <div class="user">
-                    <img src="images/Polish_20240605_142206949.jpg" alt="">
+                    <img src="images/jolie.jpg" alt="">
                     <div class="user_info">
-                        <h4>Barry <i class="fa-brands fa-linkedin"></i></h4>
-                        <small>@gmail.com </small>
+                        <h4>Jolie <i class="fa-brands fa-linkedin"></i></h4>
+                        <small>Jolie@gmail.com </small>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. inventore vero natus quaerat
-                   recusandae non ipsum at corporis,
+                <p>Boostez votre collaboration avec notre plateforme intuitive ! 
+                    Centralisez vos projets, échangez en temps réel et optimisez 
+                    votre organisation. 
+                    Adoptez un nouveau mode de travail efficace !
                </p>
             </div>
             <div class="testimonial_col">
                 <div class="user">
-                    <img src="images/Polish_20240605_142206949.jpg" alt="">
+                    <img src="images/purity.jpg" alt="">
                     <div class="user_info">
-                        <h4>Barry <i class="fa-brands fa-linkedin"></i></h4>
-                        <small>@gmail.com </small>
+                        <h4>Purity <i class="fa-brands fa-linkedin"></i></h4>
+                        <small>Purity@gmail.com </small>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing
-                    elit. inventore vero natus quaerat
-                   recusandae non ipsum at corporis,
+                <p>Travaillez ensemble, où que vous soyez ! Notre outil de collaboration 
+                    vous aide à mieux communiquer, organiser vos tâches et 
+                    atteindre vos objectifs.
+                     Rejoignez-nous maintenant !
                </p>
             </div>
           

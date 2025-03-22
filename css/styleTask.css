@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
@@ -13,6 +14,10 @@
 	background: linear-gradient(to bottom, rgba(222, 165, 31, 0.868),
 	rgba(63, 57, 31, 0.868));
 	color: #fff;
+	position: sticky;
+	top: 0;
+	
+	z-index: 1000;
 }
 .u-name {
 	font-size: 20px;
@@ -62,27 +67,8 @@ hr {
 .body {
 	display: flex;
 }
-.section-1 {
-	width: 100%;
-	background: url("../img/bg.jpg");
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
-.section-1 h1 {
-	color: #fff;
-	font-size: 60px;
-}
-.section-1 p {
-	color: #127b8e;
-	font-size: 20px;
-	background: #fff;
-	padding: 7px;
-	border-radius: 5px;
-}
+
+ 
 .side-bar ul {
 	margin-top: 20px;
 	list-style: none;
@@ -113,9 +99,60 @@ hr {
 	padding-right: 10px;
 	font-size: 23px;
 }
-#navbtn {
+/*#navbtn {
 	display: inline-block;
 	margin-left: 70px;
 	font-size: 20px;
 	transition: 500ms color;
+}*/
+.un{
+	background: linear-gradient(rgba(222, 165, 31, 0.868),
+				rgba(63, 57, 31, 0.868));
+}
+.deux {
+	background: linear-gradient(rgba(222, 79, 31, 0.868),
+			rgba(63, 57, 31, 0.868));
+}
+.trois {
+	background: linear-gradient(rgba(82, 222, 31, 0.868),
+			rgba(63, 57, 31, 0.868));
+}
+.quatre {
+	background: linear-gradient(rgba(31, 178, 222, 0.868),
+			rgba(63, 57, 31, 0.868));
+}
+.cinq {
+	background: linear-gradient(rgba(120, 31, 222, 0.868),
+			rgba(63, 57, 31, 0.868));
+}
+.dashboard {
+	display: flex;
+	width: 90%;
+	flex-wrap: wrap;
+}
+
+.dashboard_box {
+	text-align: center;
+	background-color: #262931;
+	width: 200px;
+	padding: 30px 5px;
+	margin: 30px 20px;
+	border-radius: 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+.dashboard_box a{
+	text-decoration: none;
+}
+
+.dashboard_box i {
+	display: block;
+	color: #fff;
+	font-size: 30px;
+	margin-bottom: 5px;
+}
+
+.dashboard_box span {
+	
+	color: #fff;
 }
