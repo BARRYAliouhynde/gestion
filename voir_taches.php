@@ -9,11 +9,18 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
 
 @include 'connexion_bdd.php'; // Assure-toi que ce fichier contient la connexion à ta base de données
 
-// Récupérer les tâches avec le nom de l'utilisateur assigné
-$sql = "SELECT taches.id_tache, taches.titre, taches.statut, users.username 
+// Récupérer les tâches assignées à l'admin connecté
+$sql = "SELECT taches.id_tache, taches.titre, taches.statut, taches.echeance, taches.document, users.username 
         FROM taches 
-        LEFT JOIN users ON taches.user_concerne = users.id";
+        LEFT JOIN users ON taches.user_concerne = users.id 
+        WHERE taches.admin_id = {$_SESSION['id']}"; // Récupère les tâches assignées à l'admin
+        
 $result = mysqli_query($conn, $sql);
+
+// Vérification de la requête SQL
+if (!$result) {
+    die("Erreur SQL : " . mysqli_error($conn)); // Afficher l'erreur SQL en cas de problème
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,27 +49,39 @@ $result = mysqli_query($conn, $sql);
                     <th>Titre</th>
                     <th>Assigné à</th>
                     <th>Status</th>
+                    <th>Échéance</th>
+                    <th>Document</th>
                     <th>Éditer</th>
                     <th>Supprimer</th>
                 </tr>
                 
-                <?php
-                if (mysqli_num_rows($result) > 0) {  $i=1;
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        echo "<tr>
-                                <td>{$i}</td> 
-                                <td>{$row['titre']}</td>
-                                <td>{$row['username']}</td>
-                                <td>{$row['statut']}</td>
-                                <td><a href='edit_tache.php?id_tache={$row['id_tache']}' class='btn btn-warning'>Modifier</a></td>
-                                <td><a href='supprimer_tache.php?id_tache={$row['id_tache']}' class='btn btn-danger' onclick='return confirm(\"Voulez-vous supprimer cette tâche ?\");'>Supprimer</a></td>
-                              </tr>";
+               <?php
+                if (mysqli_num_rows($result) > 0) {  
+                    $i = 1;
+                    while ($row = mysqli_fetch_assoc($result)) { ?>
+                        <tr>
+                            <td><?php echo $i; ?></td> 
+                            <td><?php echo $row['titre']; ?></td>
+                            <td><?php echo $row['username']; ?></td>
+                            <td><?php echo $row['statut']; ?></td>
+                            <td><?php echo $row['echeance']; ?></td>
+                            <td>
+                                <?php if (!empty($row['document'])): ?>
+                                    <a href="<?php echo $row['document']; ?>" target="_blank" class="btn btn-info">Voir</a>
+                                <?php else: ?>
+                                    Aucun document
+                                <?php endif; ?>
+                            </td>
+                            <td><a href='edit_tache.php?id_tache=<?php echo $row['id_tache']; ?>' class='btn btn-warning'>Modifier</a></td>
+                            <td><a href='supprimer_tache.php?id_tache=<?php echo $row['id_tache']; ?>' class='btn btn-danger' onclick='return confirm("Voulez-vous supprimer cette tâche ?");'>Supprimer</a></td>
+                        </tr>
+                    <?php  
                         $i++;
                     }
-                } else {
-                    echo "<tr><td colspan='6' class='text-center'>Aucune tâche trouvée</td></tr>";
-                }
-                ?>
+                } else { ?>
+                    <tr><td colspan='8' class='text-center'>Aucune tâche trouvée</td></tr>
+                <?php } ?>
+
             </table>
         </section>
     </div>

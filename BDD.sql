@@ -11,9 +11,15 @@ CREATE TABLE users (
 --- table taches----
 CREATE TABLE taches (
     id_tache INT AUTO_INCREMENT PRIMARY KEY,
+    admin_id INT NULL NOT NULL,
     titre VARCHAR(100) NOT NULL,
     user_concerne  INT NOT NULL,
-    statut ENUM('A Faire', 'En cours', 'Termine') DEFAULT 'En cours',
+    statut ENUM('A Faire', 'En cours', 'Terminé ') DEFAULT 'En cours',
+    echeance DATE NOT NULL ,
     cree_le TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (user_concerne) REFERENCES users(id)
+    FOREIGN KEY (user_concerne) REFERENCES users(id),
+    FOREIGN KEY (admin_id) REFERENCES users(id)
 );
+
+
+ 
