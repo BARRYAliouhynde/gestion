@@ -11,7 +11,7 @@ CREATE TABLE users (
 --- table taches----
 CREATE TABLE taches (
     id_tache INT AUTO_INCREMENT PRIMARY KEY,
-    admin_id INT NULL NOT NULL,
+    admin_id INT  NOT NULL,
     titre VARCHAR(100) NOT NULL,
     user_concerne  INT NOT NULL,
     statut ENUM('A Faire', 'En cours', 'Terminé ') DEFAULT 'En cours',

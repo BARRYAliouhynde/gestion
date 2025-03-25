@@ -7,7 +7,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] != 'admin') {
     exit();
 }
 
-@include 'connexion_bdd.php'; // Assure-toi que ce fichier contient la connexion à ta base de données
+@include 'connexion_bdd.php';
 
 // Récupérer les tâches assignées à l'admin connecté
 $sql = "SELECT taches.id_tache, taches.titre, taches.statut, taches.echeance, taches.document, users.username 

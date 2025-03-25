@@ -5,6 +5,11 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
+	
+}
+body {
+	background: linear-gradient(to bottom, rgba(215, 215, 213, 0.87),
+				rgba(215, 212, 206, 0.703));
 }
 .header {
 	display: flex;
@@ -20,7 +25,7 @@
 	z-index: 1000;
 }
 .u-name {
-	font-size: 20px;
+	font-size: 30px;
 	padding-left: 17px;
 	cursor: pointer;
 }
@@ -134,12 +139,16 @@ hr {
 .dashboard_box {
 	text-align: center;
 	background-color: #262931;
-	width: 200px;
+	width: 250px;
 	padding: 30px 5px;
-	margin: 30px 20px;
+	margin: 15px;
 	border-radius: 15px;
 	cursor: pointer;
 	text-decoration: none;
+	transition: .4s;
+}
+.dashboard_box:hover{
+	transform: scale(1.1);
 }
 .dashboard_box a{
 	text-decoration: none;

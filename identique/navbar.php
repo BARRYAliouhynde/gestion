@@ -9,7 +9,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'etudiant'; // Valeu
 <nav class="side-bar">
         <div class="user-p">
             <!-- Affiche l'image en fonction du rôle -->
-            <img src="images/<?php 
+       <img src="images/<?php 
                 if ($user_role == 'admin') {
                     echo 'admin.png'; 
                 } elseif ($user_role == 'professionnel') {
@@ -18,6 +18,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'etudiant'; // Valeu
                     echo 'etudiant.jpeg'; 
                 }
             ?>">
+
 
             <!-- Affiche le titre et le nom d'utilisateur -->
             <h4><?php 
@@ -72,7 +73,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'etudiant'; // Valeu
             <?php elseif ($user_role == 'etudiant'): ?>
                 <ul id="navList">
                     <li>
-                        <a href="#">
+                        <a href="dashboard.php">
                             <i class="fa fa-tachometer" aria-hidden="true"></i>
                             <span>Dashboard</span>
                         </a>
@@ -84,7 +85,7 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'etudiant'; // Valeu
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="voir_taches_etudiant.php">
                             <i class="fa fa-tasks" aria-hidden="true"></i>
                             <span>Mes Tâches</span>
                         </a>
@@ -106,19 +107,19 @@ $user_role = isset($_SESSION['role']) ? $_SESSION['role'] : 'etudiant'; // Valeu
             <?php elseif ($user_role == 'professionnel'): ?>
                 <ul id="navList">
                     <li>
-                        <a href="#">
+                        <a href="dashboard.php">
                             <i class="fa fa-tachometer" aria-hidden="true"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="">
                             <i class="fa fa-user" aria-hidden="true"></i>
                             <span>Mon Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="voir_taches_professionnel.php">
                             <i class="fa fa-tasks" aria-hidden="true"></i>
                             <span>Mes Tâches</span>
                         </a>

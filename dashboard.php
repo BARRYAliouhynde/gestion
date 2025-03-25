@@ -35,7 +35,7 @@ $user_id = $_SESSION['id'];
 
 			 <!-- Admin dashboard  -->
 			<?php if ($user_role == 'admin'): ?>
-            <div class="dashboard">
+            <div class="dashboard p-2 m-2">
 					<div class="dashboard_box un">
 						   <a href="ajouter_taches.php"><i class="fa fa-plus-circle" aria-hidden="true"></i></a>
 						<span> Ajouter Taches</span>
@@ -49,24 +49,24 @@ $user_id = $_SESSION['id'];
 						<span>Gestion Utilisateur</span>
 					</div>
 					<div class="dashboard_box quatre">
-						<a href=""><i class="fa fa-briefcase" aria-hidden="true"></i></a>
+						<a href="afaire_admin.php"><i class="fa fa-briefcase" aria-hidden="true"></i></a>
 						<span>A Faire</span>
 					</div>
 					<div class="dashboard_box cinq">
-						<a href=""><i class="fa fa-spinner"></i></a>
+						<a href="encours_admin.php"><i class="fa fa-spinner"></i></a>
 						<span> En Cours</span>
 					</div>
 					<div class="dashboard_box six">
-						<a href=""><i class="fa fa-check-circle" aria-hidden="true"></i></a>
+						<a href="termine_admin.php"><i class="fa fa-check-circle" aria-hidden="true"></i></a>
 						<span>Terminé </span>
 					</div>
 				</div>
 
 				 <!-- Etudiant And Professionnel dashboard  -->
-				<?php else /*($user_role == 'etudiant'|| $user_role == 'professionnel' )*/: ?>
+				<?php elseif($user_role == 'etudiant'): ?>
 				<div class="dashboard">
 					<div class="dashboard_box deux" >
-						<a href="#"><i class="fa fa-tasks"></i></a>
+						<a href="etudiant/voir_taches_etudiant.php"><i class="fa fa-tasks"></i></a>
 						<span> Mes taches</span>
 					</div>
 					<div class="dashboard_box trois">
@@ -91,12 +91,12 @@ $user_id = $_SESSION['id'];
 					</div>
 				</div>
 
-				<?php endif; ?>
-				 <!-- Professionnel dashboard 
-				 <?php //elseif ($user_role == 'professionnel'): ?>
+				
+				 <!-- Professionnel dashboard  -->
+				 <?php elseif ($user_role == 'professionnel'): ?>
 				<div class="dashboard">
 					<div class="dashboard_box deux" >
-						<a href="#"><i class="fa fa-tasks"></i></a>
+						<a href="etudiant/voir_taches_professionnel.php"><i class="fa fa-tasks"></i></a>
 						<span> Mes taches</span>
 					</div>
 					<div class="dashboard_box trois">
@@ -120,7 +120,8 @@ $user_id = $_SESSION['id'];
 						<span>Terminé </span>
 					</div>
 				</div>
-				 -->
+				
+				<?php endif; ?>
 				
         </section>
     </div>
